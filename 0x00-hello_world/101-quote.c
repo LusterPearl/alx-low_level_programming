@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	fput("and the piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
+	fput("and the piece of art is useful\" - Dora Korpar, 2015-10-19\n"  stdout);
 	return (1);
 }
