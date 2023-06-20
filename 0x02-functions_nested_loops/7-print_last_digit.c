@@ -1,31 +1,22 @@
 #include "main.h"
 /**
- * jack_bauer - Prints the minutes of a day
- *
- * Return: no return
- */
-void jack_bauer(void)
+* print_last_digit - Prints the minutes of a day
+* @n: the int to extract the last digit from
+* Return: value of the last digit
+*/
+int print_last_digit(int n)
 {
-	int a, b, c, d;
+	int a;
 
-	for (a = 0; a <= 2; a++)
-	{
-		for (b = 0; b <= 9; b++)
-		{
-			for (c = 0; c <= 5; c++)
-			{
-				for (d = 0; d <= 9; d++)
-				{
-					if (a >= 2 && b >= 4)
-						break;
-					_putchar(a + 48);
-					_putchar(b + 48);
-					_putchar(58);
-					_putchar(c + 48);
-					_putchar(d +48);
-					_putchar('\n');
-				}
-			}
-		}
-	}
+	if (n < 0)
+		n = -n;
+
+	a = n % 10;
+
+	if (a < 0)
+		a = -a;
+
+	_putchar(a + '0');
+
+	return (a);
 }
