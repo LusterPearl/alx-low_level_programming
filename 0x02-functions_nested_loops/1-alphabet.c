@@ -2,15 +2,13 @@
 /**
  * print.alphabet - Prints the alphabet in lowecase.
  *
- * Retun: always 0 (Sucess)
+ * Return: always 0 (Sucess)
  */
 void print_alphabet(void)
 {
-	int i;
+	char letter;
+        	for (letter = 'a'; letter <= 'z'; letter++)
+		_putchar(letter);
 
-	for (i = 97; i <= 122; i++)
-	{
-		_putchar(i);
-	}
 	_putchar('\n');
 }
