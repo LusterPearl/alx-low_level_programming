@@ -1,4 +1,4 @@
-#include 'main.h"
+#include "main.h"
 /**
 * print_sign - Determines if the input number
 * greater, iqual or less than zero.
@@ -18,7 +18,7 @@ int print_sign(int n)
 	else if (n < 0)
 	{
 		_putchar(45);
-		retun (-1);
+		return (-1);
 	}
 	else
 	{
