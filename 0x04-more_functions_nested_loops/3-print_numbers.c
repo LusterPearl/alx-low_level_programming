@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * print_numbers - print 0123456789
- *
+ * print_numbers - Print the numbers since 0 up to 9
  * Return: The numbers since 0 up to 9
  */
 
