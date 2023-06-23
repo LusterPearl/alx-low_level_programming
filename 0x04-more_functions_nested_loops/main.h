@@ -8,16 +8,9 @@
  * @c: The character to print
  *
  * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * On error, -1 is returned, and error is set appropriately.
  */
 int _putchar(char c)
-
-/**
- * main - Entry point
- * Description: 'prints _putchar to stdout'
- * Return: always 0
- */
-int main(void)
 
 /**
  * _isupper - uppercase letters
@@ -44,11 +37,10 @@ int mul(int a, int b);
 
 /**
  * print_numbers - Print the numbers since 0 up to 9
- * Return: no return
+ * Return: void
  */
 void print_numbers(void);
 
-void print_numbers(void);
 void print_most_numbers(void);
 void more_numbers(void);
 void print_line(int n);
