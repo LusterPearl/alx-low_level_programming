@@ -35,8 +35,8 @@ int _isdigit(int c);
 int mul(int a, int b);
 
 /**
- * print_numbers - prints
- * Return: Print the numbers since 0 up to 9
+ * print_numbers - Prints the numbers since 0 up to 9 
+ * Return: void
  */
 void print_numbers(void);
 
