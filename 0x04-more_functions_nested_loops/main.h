@@ -67,7 +67,13 @@ void print_line(int n);
  */
 void print_diagonal(int n);
 
+/**
+ * print_square - Prints n squares according n number of times
+ * @size: The number of squares/number of times
+ * Return: empty
+ */
 void print_square(int size);
+
 void print_triangle(int size);
 
 #endif
