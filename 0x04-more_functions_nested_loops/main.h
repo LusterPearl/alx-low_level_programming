@@ -74,7 +74,11 @@ void print_diagonal(int n);
  */
 void print_square(int size);
 
-
+/**
+ * print_triangle - Prints a triangle of squares according parametet
+ * @size: The Size of the squares triangle
+ * Return: empty
+ */
 void print_triangle(int size);
 
 #endif
