@@ -47,7 +47,7 @@ void print_numbers(void);
 void print_most_numbers(void);
 
 /**
- * more_numbers - number fct
+ * more_numbers - nmbr fct
  * Return: void
  */
 void more_numbers(void);
