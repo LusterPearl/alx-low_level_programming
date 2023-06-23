@@ -47,8 +47,8 @@ void print_numbers(void);
 void print_most_numbers(void);
 
 /**
- * more_numbers - nmbr fct
- * Return: no return
+ * more_numbers - Print 10 times the numbers since 0 up to 14
+ * Return: 10 times of the number since 0 up to 14
  */
 void more_numbers(void);
 
