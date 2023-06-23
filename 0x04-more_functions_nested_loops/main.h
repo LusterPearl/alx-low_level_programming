@@ -58,6 +58,11 @@ void more_numbers(void);
  * Return: empty
  */
 void print_line(int n);
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
 
 void print_diagonal(int n);
 void print_square(int size);
