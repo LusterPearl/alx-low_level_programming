@@ -36,11 +36,16 @@ int mul(int a, int b);
 
 /**
  * print_numbers - prints
- * Return: void
+ * Return: Print the numbers since 0 up to 9
  */
 void print_numbers(void);
 
+/**
+ * print_most_numbers - prints
+ * Return: void
+ */
 void print_most_numbers(void);
+
 void more_numbers(void);
 void print_line(int n);
 void print_diagonal(int n);
