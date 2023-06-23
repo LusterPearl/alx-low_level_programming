@@ -52,7 +52,13 @@ void print_most_numbers(void);
  */
 void more_numbers(void);
 
+/**
+ * print_line - Draws a straight line according to parameter
+ * @n: The number of lines to draw
+ * Return: empty
+ */
 void print_line(int n);
+
 void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
