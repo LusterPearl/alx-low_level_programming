@@ -35,7 +35,13 @@ int _strlen(char *s);
  */
 void _puts(char *str);
 
+/**
+ * print_rev - imprime en reverse
+ * @s: string
+ * Return: 0
+ */
 void print_rev(char *s);
+
 void rev_string(char *s);
 void puts2(char *str);
 void puts_half(char *str);
