@@ -42,7 +42,13 @@ void _puts(char *str);
  */
 void print_rev(char *s);
 
+/**
+ * rev_string - function that reverses a string
+ * @s: Input string
+ * Return: String in reverse
+ */
 void rev_string(char *s);
+
 void puts2(char *str);
 void puts_half(char *str);
 void print_array(int *a, int n);
