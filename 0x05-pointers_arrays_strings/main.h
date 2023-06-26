@@ -72,7 +72,20 @@ void puts_half(char *str);
  */
 void print_array(int *a, int n);
 
-
+/**
+ *char *_strcpy - a function that copies the string pointed
+ * to by src
+ * @dest: copy to
+ * @src: copy from
+ * Return: string
+ */
 char *_strcpy(char *dest, char *src);
+
+/**
+ * _atoi - Convert a string to an integer.
+ * @s: The pointer to convert
+ * Return: A integer
+ */
+int _atoi(char *s);
 
 #endif
