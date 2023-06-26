@@ -57,7 +57,17 @@ void rev_string(char *s);
 void puts2(char *str);
 
 void puts_half(char *str);
+
+/**
+ * print_array - a function that prints n elements of an
+ * arry
+ * @a: array name
+ * @n: is the number of elements of the array to be printed
+ * Return: a and n inputs
+ */
 void print_array(int *a, int n);
+
+
 char *_strcpy(char *dest, char *src);
 
 #endif
