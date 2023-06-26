@@ -1,11 +1,10 @@
 #include "main.h"
 /**
- * puts2 -  function that prints every other character of a string,
- * sarting with the first character, followed by a new line
+ * puts2 -  function that print only one character out of two
  * @str: input
  * Return: print
  */
-void put2(char *str)
+void puts2(char *str)
 {
 	int longi = 0;
 	int t = 0;
