@@ -28,7 +28,13 @@ void swap_int(int *a, int *b);
  */
 int _strlen(char *s);
 
+/**
+ * _puts -  a function that prints a string, followed by a new line,
+ *  to stdout
+ *  @str: string to print
+ */
 void _puts(char *str);
+
 void print_rev(char *s);
 void rev_string(char *s);
 void puts2(char *str);
