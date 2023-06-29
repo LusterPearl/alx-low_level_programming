@@ -67,7 +67,7 @@ char *cap_string(char *);
  * @s: pointer to string params
  * Return: *s
  */
-char *rot13(char *);
+char *rot13(char *)
 
 /**
  * print_number - Prints any integer with putchar
@@ -77,6 +77,15 @@ char *rot13(char *);
 void print_number(int n);
 
 
+/**
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer for result
+ * @size_r: buffer size
+ * ahhh! crazy task Expand your Knowlegde
+ * Return: adress of r or 0
+ */
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
 
