@@ -9,10 +9,10 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 	/*
+	 * main - entry point
 	* write your line of code here...
 	* Remember:
-	* main - program prints a[2] = 98, followed by a new line.
-	* main - prints program void
+	* main void - entry point
 	* - you are not allowed to use a
 	* - you are not allowed to modify p
 	* - only one statement

@@ -70,8 +70,8 @@ char *cap_string(char *);
 char *rot13(char *);
 
 /**
- * print_number - print numbers chars
- * @n: integer params
+ * print_number - Prints any integer with putchar
+ * @n: number to prints
  * Return: 0
  */
 void print_number(int n);
