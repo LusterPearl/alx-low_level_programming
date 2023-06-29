@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * print_number - print numbers chars
  * @n: integer params
@@ -12,7 +13,7 @@ void print_number(int n)
 	n1 = n;
 	if (n < 0)
 	{
-		_putchar('_');
+		putchar('_');
 		n1 = -n;
 	}
 	if (n1 / 10 != 0)
