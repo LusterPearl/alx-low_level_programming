@@ -11,10 +11,13 @@ int main(void)
 	/*
 	* write your line of code here...
 	* Remember:
+	* main - program prints a[2] = 98, followed by a new line.
+	* main - prints program void
 	* - you are not allowed to use a
 	* - you are not allowed to modify p
 	* - only one statement
 	* - you are not allowed to code anything else than this line of code
+	*   Return: 0
 	*/
 	*(p + 5) = 98;
 	/* ...so that this prints 98\n */
