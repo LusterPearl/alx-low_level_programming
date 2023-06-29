@@ -13,8 +13,17 @@
  */
 char *_strcat(char *dest, char *src);
 
-
+/**
+ * _strncat - concatenates two strings
+ * using at most n bytes from src
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ * Return: dest
+ */
 char *_strncat(char *dest, char *src, int n);
+
+
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 void reverse_array(int *a, int n);
