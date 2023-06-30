@@ -67,7 +67,7 @@ char *cap_string(char *);
  * @s: pointer to string params
  * Return: *s
  */
-char *rot13(char *)
+char *rot13(char *);
 
 /**
  * print_number - Prints any integer with putchar
