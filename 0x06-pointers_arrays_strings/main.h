@@ -88,7 +88,15 @@ void print_number(int n);
  * Return: adress of r or 0
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+/**
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size
+ * Return: void
+ */
 void print_buffer(char *b, int size);
+
 int _putchar(char c);
 
 #endif
