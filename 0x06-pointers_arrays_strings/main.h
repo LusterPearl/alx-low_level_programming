@@ -2,20 +2,8 @@
 #define MAIN_H
 
 #include <stdio.h>
-#include <unistd.h>
+#include <stdlib.h>
 
-
-/**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c);
-{
-	return (write(1, &c, 1));
-}
 
 /**
  * _strcat - concatenates two strings
@@ -100,6 +88,6 @@ void print_number(int n);
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
-
+int _putchar(char c);
 
 #endif
