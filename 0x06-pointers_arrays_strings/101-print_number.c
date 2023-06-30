@@ -1,21 +1,22 @@
 #include "main.h"
 
 /**
- * print_number - Prints any integer with putchar
- * @n: number to prints
+ * print_number - print numbers chars
+ * @n: integer params
  * Return: 0
  */
-
 void print_number(int n)
 {
 	unsigned int n1;
 
 	n1 = n;
+
 	if (n < 0)
 	{
 		putchar('_');
 		n1 = -n;
 	}
+
 	if (n1 / 10 != 0)
 	{
 		print_number(n1 / 10);
