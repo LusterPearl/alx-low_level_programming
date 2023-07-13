@@ -8,7 +8,7 @@
  * @old_size: old size
  * @new_size: new sizes
  *
- * Retrun: Always 0
+ * Return: Always 0
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
