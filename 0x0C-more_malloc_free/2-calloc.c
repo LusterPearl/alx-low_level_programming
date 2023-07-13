@@ -4,11 +4,11 @@
 /**
  * _calloc -  a function that allocates memory for an array
  * @nmemb: number of members
- * @size: size of bytes
+ * @size: size
  *
  * Return: Always 0
  */
-voiid *_calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int i = 0, l = 0;
 	char *p;
