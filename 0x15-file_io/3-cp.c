@@ -20,7 +20,7 @@ char *allocate_buffer(char *filename)
 	if (data_buffer == NULL)
 	{
 		dprintf(STDERR_FILENO,
-				"Error: Unable to allocate buffer for %s\n", filename);
+				"Error: Can't write to %s\n", filename);
 		exit(99);
 	}
 	return (data_buffer);
@@ -38,7 +38,7 @@ void close_descriptor(int file_descriptor)
 
 	if (close_status == -1)
 	{
-	dprintf(STDERR_FILENO, "Error: Unable to close fd %d\n", file_descriptor);
+	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_descriptor);
 			exit(100);
 	}
 }
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: my_cp source_file dest_file\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
 		if (source_file_descriptor == -1 || read_bytes == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: unable to read from file %s\n", argv[1]);
+					"Error: Can't read from file %s\n", argv[1]);
 			free(data_buffer);
 			exit(98);
 		}
@@ -85,7 +85,7 @@ int main(int argc, char *argv[])
 		if (dest_file_descriptor == -1 || write_bytes == -1)
 		{
 			dprintf(STDERR_FILENO,
-					"Error: Unable to write to %s\n", argv[2]);
+					"Error: Can't write to %s\n", argv[2]);
 			free(data_buffer);
 			exit(99);
 		}
