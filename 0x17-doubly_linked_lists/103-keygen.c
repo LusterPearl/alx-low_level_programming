@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Usage: %s <username>\n", argv[0]);
 		return (1);
 	}
-	generated_key(argv[1]);
+	generate_key(argv[1]);
 
 	return (0);
 }
