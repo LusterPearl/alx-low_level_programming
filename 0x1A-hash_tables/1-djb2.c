@@ -4,7 +4,7 @@
  * hash_djb2 - Hashes a string using the djb2 algorithm
  * @str: The input string to be hashed.
  *
- * Return: The has value
+ * Return: The computed has value has an unsigned int.
  */
 unsigned long int hash_djb2(const unsigned char *str)
 {
