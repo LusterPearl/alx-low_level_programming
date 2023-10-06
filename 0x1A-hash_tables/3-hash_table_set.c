@@ -35,7 +35,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 
 	/* Create a new node for the key-value */
-	new_node = create_node(key, value);
+	new_node = (key, value);
 	if (new_node == NULL)
 		return (0);
 
