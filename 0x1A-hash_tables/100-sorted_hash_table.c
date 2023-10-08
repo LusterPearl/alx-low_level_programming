@@ -84,7 +84,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 	}
 
-	new_node->next = ht->[index];
+	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 
     /* Insert into sorted linked list */
@@ -139,7 +139,7 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 		return (NULL);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	current = ht->array[index};
+	current = ht->array[index];
 
 	while (current)
 	{
