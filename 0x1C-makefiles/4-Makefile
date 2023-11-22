@@ -1,15 +1,17 @@
+# Variables
 CC = gcc
 SRC = main.c school.c
-OBJ = $(SRC:.C=.o)
+OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
+# Rules
 all: $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~$(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
@@ -18,5 +20,6 @@ fclean: clean oclean
 
 re: fclean all
 
+# Rule: recompile only updated source files
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
