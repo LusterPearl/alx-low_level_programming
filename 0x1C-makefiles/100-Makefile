@@ -6,6 +6,7 @@ NAME = school
 CFLAGS = -Wall - Werror - Wextra - pedantic
 RM = rm -f
 
+# Rules
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -21,9 +22,11 @@ fclean: clean oclean
 
 re: fclean all
 
+# Rule: recompile only updated source files
 $(OBJ): $(SRC)
 	$(CC) $(CFLAGS) -c $^ -o $@
 
+# Check if m.h exists
 ifeq (,$(wildcard m.h))
 $(error m.h not found)
 endif
