@@ -1,14 +1,16 @@
+# Variables
 CC = gcc
 SRC = main.c school.c
 OBJ = $(SRC:.c=.o)
 NAME = school
 RM = rm -f
 
+# Rules
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~$(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
@@ -17,5 +19,6 @@ fclean: clean oclean
 
 re: fclean all
 
+# Rule: recompile only updated source files
 %.o: %.c
 	$(CC) -c $< -o $@
