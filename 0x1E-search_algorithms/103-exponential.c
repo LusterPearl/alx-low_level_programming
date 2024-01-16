@@ -8,24 +8,27 @@
  * @size: Number of elements in array
  * @value: The value to search
  *
- * Return: The index where the value is located, or -1 if not found
+ * Return: The index where the value is located
  */
 int exponential_search(int *array, size_t size, int value)
 {
+	size_t bound = 1;
+	size_t start, end;
+
 	if (array == NULL || size == 0)
 		return (-1);
 
-	size_t bound = 1;
 	while (bound < size && array[bound] < value)
 	{
 		printf("Vlaue checked array[%lu] = [%d]\n", bound, array[bound]);
 		bound *= 2;
 	}
 
-	size_t start = bound / 2;
-	size_t end = (bound < size - 1) ? bound : size - 1;
+	start = bound / 2;
+	end = (bound < size - 1) ? bound : size - 1;
+
 	printf("Value found between indexes [%lu] and [%lu]\n", start, end);
-	return (binary_search(array, size, value, start, end));
+	return binary_search(array, size, value, start, end);
 }
 /**
  * binary_search - Searches for a value in a sorted arra
@@ -37,14 +40,17 @@ int exponential_search(int *array, size_t size, int value)
  *
  * Return: The index where the value is located, or -1 if not found
  */
-int binary_search(int *array, size_t size, int value, size_t start, size_t end)
+int binary_search(int *arra int value, size_t start, size_t end)
 {
+	size_t mid;
+	size_t i;
+
 	while (start <= end)
 	{
-		size_t mid = start + (end - start) / 2;
+		mid = start + (end - start) / 2;
 
 		printf("Searching in array: %d", array[start]);
-		for (size_t i = start + 1; i <= end; i++)
+		for (i = start + 1; i <= end; i++)
 			printf(", %d", array[i]);
 		printf("\n");
 
