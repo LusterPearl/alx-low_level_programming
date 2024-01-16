@@ -38,9 +38,9 @@ int exponential_search(int *array, size_t size, int value)
  * @start: The starting index of the range
  * @end: The ending index of the range
  *
- * Return: The index where the value is located, or -1 if not found
+ * Return: The index where the value is l
  */
-int binary_search(int *arra int value, size_t start, size_t end)
+static int binary_search_exponential(int *array, int value, size_t start, size_t end);
 {
 	size_t mid;
 	size_t i;
