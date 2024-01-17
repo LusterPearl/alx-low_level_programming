@@ -1,20 +1,18 @@
 #include <stdlib.h>
-#include "search_algos.h"
+#include "listint.h"
 
 /**
- * free_list - frees a list
- * @head: head of the linked list
- * Return: no return
+ * free_list - Frees a singlu linked list
+ * @list: Pointer to the head of the list
  */
-
-void free_list(list_t *head)
+void free_list(listint_t *list)
 {
-	list_t *current_node;
+	listint_t *temp;
 
-	while ((current_node = head) != NULL)
+	while (list != NULL)
 	{
-		head = head->next;
-		free(current_node->str);
-		free(current_node);
+		temp = list;
+		list = list->next;
+		free(temp);
 	}
 }

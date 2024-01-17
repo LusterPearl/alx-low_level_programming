@@ -1,25 +1,17 @@
-#include "search_algos.h"
 #include <stdio.h>
-#include <stdlib.h>
+#include "listint.h"
 
 /**
- * print_list - prints all the elements of a list_t list
- * @h: the list_t list
- *
- * Return: the number of nodes in h
+ * print_list - Prints the elements of a singly linked list
+ * @list: Pointer to the head of the list
  */
-size_t print_list(const list_t *h)
+void print_list(const listint_t *list)
 {
-	size_t nodes = 0;
-
-	while (h)
+	printf("List :\n");
+	while (list != NULL)
 	{
-		if (h->str == NULL)
-			printf("[0] (nil)\n");
-		else
-			printf("[%d] %s\n", h->len, h->str);
-		nodes++;
-		h = h->next;
+		printf("Index[%lu] = [%d]\n", list->index, list->n);
+		list = list->next;
 	}
-	return (nodes);
-}\
+	printf("\n");
+}
