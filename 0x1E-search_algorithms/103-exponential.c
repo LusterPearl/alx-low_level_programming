@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stddef.h>
 #include "search_algos.h"
 
 /**
@@ -21,7 +20,7 @@ int exponential_search(int *array, size_t size, int value)
 
 	while (bound < size && array[bound] < value)
 	{
-		printf("Vlaue checked array[%lu] = [%d]\n", bound, array[bound]);
+		printf("Value checked array[%lu] = [%d]\n", bound, array[bound]);
 		bound *= 2;
 	}
 
@@ -48,5 +47,6 @@ int exponential_search(int *array, size_t size, int value)
 		else
 			high = mid - 1;
 	}
+
 	return (-1);
 }
