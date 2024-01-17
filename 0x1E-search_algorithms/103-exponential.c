@@ -13,7 +13,7 @@
 int exponential_search(int *array, size_t size, int value)
 {
 	size_t bound = 1;
-	size_t start, end;
+	size_t low, high, mid;
 
 	if (array == NULL || size == 0)
 		return (-1);
@@ -24,42 +24,28 @@ int exponential_search(int *array, size_t size, int value)
 		bound *= 2;
 	}
 
-	start = bound / 2;
-	end = (bound < size - 1) ? bound : size - 1;
-
-	printf("Value found between indexes [%lu] and [%lu]\n", start, end);
-	return binary_search(array, size, value, start, end);
-}
-/**
- * binary_search - Searches for a value in a sorted arra
- * @array: Pinter to the first element of the array to search
- * @size: Number of element nin array
- * @value: The value to search for
- * @start: The starting index of the range
- * @end: The ending index of the range
- *
- * Return: The index where the value is l
- */
-static int binary_search_exponential(int *array, int value, size_t start, size_t end);
-{
-	size_t mid;
-	size_t i;
-
-	while (start <= end)
+	low = bound / 2;
+	high = (bound < size - 1) ? bound : size - 1;
+	printf("Value found between indexes [%lu] and [%lu]\n", low, high);
+	while (low <= high)
 	{
-		mid = start + (end - start) / 2;
-
-		printf("Searching in array: %d", array[start]);
-		for (i = start + 1; i <= end; i++)
-			printf(", %d", array[i]);
+		printf("Searching in array: ");
+		for (mid = low; mid <= high; mid++)
+		{
+			printf("%d", array[mid]);
+			if (mid < high)
+				printf(", ");
+		}
 		printf("\n");
+
+		mid = (low + high) / 2;
 
 		if (array[mid] == value)
 			return (mid);
-		if (array[mid] < value)
-			start = mid + 1;
+		else if (array[mid] < value)
+			low = mid + 1;
 		else
-			end = mid - 1;
+			high = mid - 1;
 	}
 	return (-1);
 }
