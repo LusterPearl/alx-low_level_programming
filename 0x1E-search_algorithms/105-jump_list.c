@@ -19,19 +19,20 @@ listint_t *create_list(int *array, size_t size)
 	for (i = 0; i < size; i++)
 	{
 		listint_t *new_node = malloc(sizeof(listint_t));
+
 		if (new_node == NULL)
 		{
 			free_list(head);
 			return (NULL);
 		}
-		new_node-n = array[i];
+		new_node->n = array[i];
 		new_node->index = i;
 		new_node->next = NULL;
 
 		if (node == NULL)
 			head = new_node;
 		else
-			node->nexr = new_node;
+			node->next = new_node;
 
 		node = new_node;
 	}
@@ -81,18 +82,31 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 {
 	size_t step = sqrt(size);
 	size_t prev = 0;
-	size_t i;
 
 	if (list == NULL)
 		return (NULL);
 
-	while (list->index < size && list->n < value)
+	while (list->next != NULL && list->n < value)
 	{
 		if (list->index >= prev)
 		{
-			printf("Value checked at index [%lu] = [%d]\n", list->index, list->n);
+			printf("Value checked at index [%lu] = [%d]\n",
+				list->index, list->n);
 			prev += step;
+		if (prev >= size)
+			break;
 		}
 		list = list->next;
 	}
+	printf("Value found between indexes [%lu] and [%lu]\n",
+		list->index - step, list->index);
+	while (list != NULL && list->index >= list->index - step)
+	{
+		printf("Value checked at index {%lu] = [%d]\n", list->index, list->n);
+		if (list->n == value)
+			return (list);
 
+		list = list->next;
+	}
+	return (NULL);
+}

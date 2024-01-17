@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef  SEARCH_ALGOS_H
+#define  SEARCH_ALGOS_H
 
 #include <unistd.h>
 #include <stddef.h>
@@ -50,5 +50,11 @@ int advanced_binary(int *array, size_t size, int value);
 void print_array(int *array, size_t start, size_t end);
 int advanced_binary_recursive(int *array, size_t start, size_t end, int value);
 listint_t *jump_list(listint_t *list, size_t size, int value);
+listint_t *create_list(int *array, size_t size);
+void print_list(const listint_t *list);
+void free_list(listint_t *list);
 skiplist_t *linear_skip(skiplist_t *list, int value);
-#endif/*MAIN_H*/
+skiplist_t *create_skiplist(int *array, size_t size);
+void print_skiplist(const skiplist_t *list);
+void free_skiplist(skiplist_t *list);
+#endif/*  SEARCH_ALGOS_H */
